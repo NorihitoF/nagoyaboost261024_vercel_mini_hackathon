@@ -1,7 +1,8 @@
-<div class="shell">
-	<header>
-	</header>
+<script lang="ts">
+	let { children } = $props();
+</script>
 
+<div class="shell">
 	<main>
 		{@render children()}
 	</main>
@@ -19,44 +20,8 @@
 		flex-direction: column;
 	}
 
-	header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 1rem;
-		flex-wrap: wrap;
-		padding-bottom: 1rem;
-		border-bottom: 1px solid var(--line);
-	}
-
-	.brand {
-		font-weight: 700;
-		font-size: 1.1rem;
-		text-decoration: none;
-		color: var(--fg);
-	}
-
-	nav {
-		display: flex;
-		gap: 0.5rem;
-	}
-
-	nav a {
-		padding: 0.35rem 0.75rem;
-		border-radius: 999px;
-		text-decoration: none;
-		color: var(--muted);
-		font-size: 0.9rem;
-	}
-
-	nav a[aria-current='page'] {
-		background: var(--accent);
-		color: #fff;
-	}
-
 	main {
 		flex: 1;
-		padding-top: 1.5rem;
 	}
 
 	footer {
