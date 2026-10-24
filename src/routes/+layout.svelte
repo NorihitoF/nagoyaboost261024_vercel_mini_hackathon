@@ -1,25 +1,5 @@
-<script lang="ts">
-	import '../app.css';
-	import { page } from '$app/state';
-
-	let { children } = $props();
-
-	const nav = [
-		{ href: '/', label: 'おみくじ' },
-		{ href: '/history', label: 'おみくじ記録' }
-	];
-</script>
-
 <div class="shell">
 	<header>
-		<a class="brand" href="/">⛩ おみくじ</a>
-		<nav>
-			{#each nav as item (item.href)}
-				<a href={item.href} aria-current={page.url.pathname === item.href ? 'page' : undefined}>
-					{item.label}
-				</a>
-			{/each}
-		</nav>
 	</header>
 
 	<main>
